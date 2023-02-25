@@ -1,0 +1,41 @@
+<!-- Just For Start -->
+<!-- <p>todos works!</p> -->
+
+<!-- Display All Todos -->
+
+<!-- ngFor Directive -->
+<!-- <ul *ngFor = "let todo of todos" >
+    <li> {{todo.sno}} -  {{todo.title}} -  {{todo.desc}} </li>
+</ul> -->
+
+
+<!-- # Main Code # -->
+
+<!-- Add your todos  -->
+<div class="container">
+  <h2 class="text-center mt-4 fw-semibold bg-opacity-10 text-dark bg-danger "> Suraj Todo List </h2>
+  <app-add-todo [index]="todos.length + 1 " (todoAdd)="addTodo($event)"></app-add-todo>
+  <h4 class="my-4 fw-semibold"> Your Todos</h4>
+
+  <!-- Check for todo-list is empty -->
+  <!-- We use 'ngif' directives for condition checking -->
+  <!-- !todos.length means todos.length === 0 -->
+
+  <div class="fw-semibold text-center bg-opacity-10 text-danger bg-secondary " *ngIf="!todos.length; else elseBlock">
+    <h3>Todo List - Empty</h3>
+  </div>
+
+  <ng-template #elseBlock>
+    <!-- Pass Todo to another component for display -->
+    <div *ngFor="let todo of todos">
+      <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)">
+      </app-todo-item>
+    </div>
+  </ng-template>
+</div>
+
+
+
+<!-- # Note # -->
+<!-- As we click the button - event is fire - and we have listen it means handle it -->
+<!-- We listen tododelete and call DeleteTodo() -->

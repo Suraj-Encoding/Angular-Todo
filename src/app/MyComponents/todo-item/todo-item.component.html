@@ -1,0 +1,47 @@
+<!-- Just For Start -->
+<!-- <p>todo-item works!</p> -->
+
+<!-- Display Each Todo -->
+
+<div class="my-3 mx-1">
+  <!-- # Original -->
+  <!-- <h5> {{todo.title}} </h5> -->
+
+  <!-- # Implement strike class # -->
+
+  <!-- # Using Normal JavaScript Class -->
+  <!-- <h5 [class] = " todo.active ? 'nostrike' : 'strike' " > {{todo.title}} </h5> -->
+
+  <!-- # Using 'ng-class' directive - For strike through -->
+  <div class="{{todo.color}} bg-opacity-25">
+    <h5 class="mx-2 d-inline-block  fw-bold" [ngClass]="{'strike': !todo.active}"> {{todo.title}} </h5>
+    <h6 class=" btn mx-1 my-2 py-0 px-2 btn-success text-light d-inline-block fw-bold" [ngClass]="{'strike': !todo.active}">
+      {{todo.brand}} </h6>
+    <p class="mx-2  fw-bold" [ngClass]="{'strike': !todo.active}"> {{todo.desc}} </p>
+  </div>
+
+  <!-- # checkbox - For Mark as a done -->
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="todo-{{todo.sno}}{{1}}" (click)="onCheckBoxClick(todo)"
+      [checked]="!todo.active">
+    <label class="form-check-label fw-semibold" for="todo-{{todo.sno}}">Done</label>
+  </div>
+  <button class="btn text-black fw-semibold  btn-outline-primary font-bold btn-warning btn-sm " (click)="onClick(todo)">
+    Delete</button>
+</div>
+<hr>
+
+
+<!-- # Note # -->
+
+<!-- 
+
+1. Click is an event
+2. In angular event handling is very easy
+3. Event Emitter - It Emits the event from one component to another component
+                 - In our case we emit the event fron todo-item-component to todos-component
+                   and todos will catch it and take the neccessary action
+
+4. checkbox click -> Mark as done -> strike through OR line through - means cross the text by horizontal line
+
+-->

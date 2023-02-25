@@ -1,0 +1,48 @@
+--------------------------------
+# Important Angular Commands #
+--------------------------------
+
+1. Install Angular CLI 
+      1. npm install -g @angular/cli    -  (Globally)  - In Machine i.e computer
+      2. npm install @angular/cli       -  (Locally)   - In that project directory
+      3. npm i -g @angular/cli       
+      4. npm install -g @angular/cli@version   - (For specific version) - [ @version = @1.2.3 ]
+      5. sudo npm install -g @angular/cli      - (always write sudo to avoid errors)
+      6. yarn add @angular/cli                 - (Using yarn & globally by defualt)
+    # Note:
+          1.  -g    -> Global
+          2.   i    -> install
+          3.  sudo  -> For admin Rights  - as I am the admin of this machine i.e computer.
+
+2. Port:
+     1. Default 'angular' port is - 4200
+     2. Default 'react' port is   - 5000
+
+
+2. ng Commands:
+      
+      1. ng new app-name  -> Create new app for you
+      2. ng serve         -> To start the serve for development
+      3. ng build         -> Build your app for production
+      4. ng version       -> Show Angular CLI version
+          (ng v)
+      5. ng serve --port 4400  -> Serve on different port
+               OR
+         (ng serve --port=4400)
+      6. ng serve --open   -> Directly open your server in browser
+      7. ng generate component component-folder-name/component-name
+                               OR
+                 (ng generate component component-name)
+         # Example:
+             - ng generate component MyComponents/todos
+             - ng generate component todos
+             - MyComponents is folder name
+             - todos is actual component
+      8. Shortcut to generate components - ' ng g c '
+      9.  ng build --prod  -> Build your app for production
+            -  prod means production
+            -  It creates one 'dist' folder - In which all your files are wrapped
+            -  It converts your app to static website
+
+
+ 

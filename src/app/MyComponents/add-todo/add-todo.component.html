@@ -1,0 +1,41 @@
+<!-- Just For Start -->
+<!-- <p>add-todo works!</p> -->
+
+<!-- Add your Todos using below Form -->
+<div class="my-3">
+    <h4 class="fw-semibold"> Add a Todo </h4>
+    <!-- # ngSubmit -->
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label mt-2 fw-bold">Todo Title</label>
+            <input type="text" class="fw-bold bg-info form-control" [(ngModel)]="title" name="title" id="title"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label fw-bold">Todo Description</label>
+            <input type="text" class="fw-bold bg-info form-control" [(ngModel)]="desc" name="desc" id="desc">
+        </div>
+
+        <!-- changes -->
+        <div class="form-group mb-3">
+            <label for="tag" class="form-label fw-bold"> Todo Tag </label>
+            <select type="text" class="fw-bold bg-info form-control" [(ngModel)]="tag" name="tag" id="tag">
+                <option> Important </option>
+                <option> Urgent </option>
+                <option> Important & Urgent </option>
+                <option> Today </option>
+                <option> Nothing </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn fw-semibold btn-sm btn-success">Add Todo</button>
+    </form>
+</div>
+
+
+<!-- # Note # -->
+<!-- To use 'ng directives' is very very easy and effective - which Saves our time and efforts -->
+<!-- 'ngSubmit' is an event in angular that we have to listen and handle
+on form submit - which do all by itself -->
+<!-- In angular Prevent previous data and no page reload concepts are automatically done by ng -->
+<!-- We use 'ngModel' directives in Input tag - For saving our input in varibles-->
