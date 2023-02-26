@@ -1,4 +1,4 @@
- # ✩ My First Angular Application ✩
+ # 🕸️  My First Angular Application 🕸️
 
 ## Site is Live on : 👇
                https://mytoodo.web.app/
@@ -32,8 +32,10 @@
 ## Important Scripts:
 
 ### `npm install -g @angular/cli `
+Install angular in your computer globally
 
-Generates basic code of react for you
+### `ng new app-name`
+Generates basic code of angular for you
 
 ### `ng serve`
 
@@ -46,13 +48,13 @@ You may also see any lint errors in the console.
 
 ### `ng build `
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `dist` folder.\
+It correctly bundles Angular in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-It convert React website to static website
+It convert angular website to static website
 
 
 
